@@ -9,7 +9,7 @@ locationForm.addEventListener('submit', (e) => {
     // console.log(searchLocation.value)
     messageOne.textContent = 'Loading...'
 
-    fetch(`http://localhost:3000/weather?location=${searchLocation.value}`).then((response)=>{
+    fetch(`/weather?location=${searchLocation.value}`).then((response)=>{
     response.json().then((data) => {
         if (data.error) {
             // console.log(data.error)
